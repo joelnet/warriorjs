@@ -1,0 +1,44 @@
+{
+  "name": "nan-beginner",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Joel Thomns",
+  "license": "MIT",
+  "main": "Player.js",
+  "scripts": {
+    "build": "rollup src/main.js -c | sed -e :a -e '$d;N;2,2ba' -e 'P;D' > Player.js",
+    "start": "npm run build && warriorjs"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "rollup": "^0.60.2",
+    "rollup-plugin-babel": "^3.0.4"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "modules": false
+        }
+      ]
+    ],
+    "plugins": [
+      "transform-class-properties",
+      [
+        "transform-object-rest-spread",
+        {
+          "useBuiltIns": true
+        }
+      ]
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  }
+}
