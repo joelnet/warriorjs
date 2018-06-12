@@ -8,6 +8,7 @@
   "scripts": {
     "clean": "rimraf Player.js",
     "build": "npm run clean && webpack",
+    "watch": "npm run build -- --watch",
     "start": "npm run build && warriorjs"
   },
   "devDependencies": {
