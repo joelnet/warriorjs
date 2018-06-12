@@ -6,7 +6,8 @@
   "license": "MIT",
   "main": "Player.js",
   "scripts": {
-    "build": "rollup src/main.js -c | sed -e :a -e '$d;N;2,2ba' -e 'P;D' > Player.js",
+    "clean": "rimraf Player.js",
+    "build": "npm run clean && rollup src/main.js -c | sed -e :a -e '$d;N;2,2ba' -e 'P;D' > Player.js",
     "start": "npm run build && warriorjs"
   },
   "devDependencies": {
@@ -15,6 +16,7 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "rimraf": "^2.6.2",
     "rollup": "^0.60.2",
     "rollup-plugin-babel": "^3.0.4"
   },
