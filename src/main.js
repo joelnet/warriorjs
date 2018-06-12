@@ -4,4 +4,4 @@ class Player {
   playTurn = playTurn
 }
 
-export default Player
+global.Player = Player
