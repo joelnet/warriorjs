@@ -47,5 +47,8 @@
   "prettier": {
     "semi": false,
     "singleQuote": true
+  },
+  "dependencies": {
+    "ramda": "^0.25.0"
   }
 }

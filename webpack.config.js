@@ -1,7 +1,7 @@
 const webpack = require('webpack')
 
 module.exports = {
-  mode: 'production',
+  mode: 'none',
   entry: {
     app: ['./src/main.js']
   },
