@@ -7,10 +7,19 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch",
+      "name": "Launch Slow",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["start"],
       "console": "integratedTerminal"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Instant",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["start"],
+      "console": "integratedTerminal",
+      "args": ["--", "-t", "0"]
     }
   ]
 }
