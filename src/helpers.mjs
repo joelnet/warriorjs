@@ -12,3 +12,10 @@ export const isNotFullHealth = complement(isFullHealth)
 export const isTakingDamage = ({ state, player }) =>
   player.prevState.health > state.health
 export const isNotTakingDamage = complement(isTakingDamage)
+
+export const getFirstNonEmpty = ([space, ...spaces]) =>
+  space == null || (!space.isEmpty && !space.isWall)
+    ? space
+    : getFirstNonEmpty(spaces)
+
+export const isEnemy = space => space != null && !!space.isEnemy
