@@ -5,7 +5,7 @@ import * as retreat from './strategies/retreatStrategy'
 import * as rest from './strategies/restStrategy'
 import * as walk from './strategies/walkStrategy'
 
-const playTurn = cond([
+const getAction = cond([
   [retreat.test, retreat.run],
   [rescue.test, rescue.run],
   [attack.test, attack.run],
@@ -13,4 +13,4 @@ const playTurn = cond([
   [walk.test, walk.run]
 ])
 
-export default playTurn
+export default getAction

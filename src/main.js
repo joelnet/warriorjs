@@ -1,4 +1,4 @@
-import playTurn from './playTurn'
+import getAction from './getAction'
 import getState from './getState'
 
 class Player {
@@ -11,7 +11,9 @@ class Player {
   playTurn = warrior => {
     const player = this
     const state = getState({ warrior, player })
-    const action = playTurn({ warrior, player, state })
+    const [action, ...args] = getAction({ warrior, player, state })
+
+    warrior[action](...args)
 
     if (action === 'rescue') {
       player.direction = 'forward'

@@ -3,6 +3,4 @@ import { isLowHealth, isTakingDamage, reverse } from '../helpers'
 
 export const test = allPass([isLowHealth, isTakingDamage])
 
-export const run = ({ warrior, player }) => (
-  warrior.walk(reverse(player.direction)), 'retreat'
-)
+export const run = ({ player }) => ['walk', reverse(player.direction)]

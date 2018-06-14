@@ -1,4 +1,2 @@
 export const test = ({ state }) => state.isBound
-export const run = ({ warrior, player }) => (
-  warrior.rescue(player.direction), 'rescue'
-)
+export const run = ({ player }) => ['rescue', player.direction]
